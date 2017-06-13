@@ -46,7 +46,7 @@ public class MCursor
 	public static void error (String Texto){
 		MCursor.BLinea(2);
 		MCursor.eqline();
-		MCursor.TJus("E		R		R		O		R\n");
+		MCursor.TCen("E	R	R	O	R\n");
 		MCursor.TCen(Texto);
 		MCursor.eqline();
 		MCursor.Salida();

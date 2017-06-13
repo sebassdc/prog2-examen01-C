@@ -18,12 +18,12 @@ public class Inscripciones {
 			// Valida que hayan alumnos inscritos
 			if (opc == 2 && !alumno_inscrito) {
 				MCursor.error("DEBE AGREGAR AL MENOS UN ALUMNO");
-				break;
+				continue;
 			}
 			// Solo acepta opciones del 0 al 2
 			if (opc > 2 || opc < 0) { 
 				MCursor.error("ESCOJA UNA OPCION DEL MENU");
-				break;
+				continue;
 			}
 
 			MCursor.BLinea(30);
@@ -91,7 +91,7 @@ public class Inscripciones {
 			MCursor.UCursor(15);
 			n_uc = Leer.NByte("NUMERO DE UNID DE CREDITO = ");
 			if ( n_uc < MIN_UC  || n_uc > MAX_UC) {
-				MCursor.error("EL NUMERO DE UC DEBE SER DE" + MIN_UC + " A " + MAX_UC);
+				MCursor.error("EL NUMERO DE UC DEBE SER DE " + MIN_UC + " A " + MAX_UC);
 				continue;
 			} else break;
 		} while (true);
@@ -133,8 +133,8 @@ public class Inscripciones {
 			for(int i = 0; i < ALUMNOS.size(); i++) {
 				MCursor.BLinea(30);
 				ALUMNOS.get(i).mostrar(i);
+				MCursor.Salida();
 			}
-			MCursor.Salida();
 		}//else
 		return;
 	}
